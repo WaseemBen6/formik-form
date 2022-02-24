@@ -41,6 +41,8 @@ export default function RequestForm() {
               initialValues={initialValues}
               validationSchema={validationSchema}
               onSubmit={onSubmit}
+              validateOnBlur={false}
+              validateOnChange={false}
             >
               <Form>
                 <Grid container spacing={2}>
