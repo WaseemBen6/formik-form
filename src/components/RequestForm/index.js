@@ -139,103 +139,119 @@ export default function RequestForm() {
                   </Grid>
                   {/* Auth Signatory */}
                   <Grid item xs={12}>
-                  <Typography color="primary">Authorised Signatory</Typography>
-    </Grid>
-    <Grid item xs={12} md={4}>
-                  <FormikControl
-                    control="input"
-                    name="firstName"
-                    label="First Name"
-                  /></Grid>
+                    <Typography color="primary">
+                      Authorised Signatory
+                    </Typography>
+                  </Grid>
                   <Grid item xs={12} md={4}>
-                  <FormikControl
-                    control="input"
-                    name="lastName"
-                    label="Last Name"
-                  /></Grid>
+                    <FormikControl
+                      control="input"
+                      name="firstName"
+                      label="First Name"
+                    />
+                  </Grid>
                   <Grid item xs={12} md={4}>
-                  <FormikControl control="input" name="email" label="Email" />
-        </Grid>
+                    <FormikControl
+                      control="input"
+                      name="lastName"
+                      label="Last Name"
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4}>
+                    <FormikControl control="input" name="email" label="Email" />
+                  </Grid>
                   {/* Property Details */}
                   <Grid item xs={12}>
-                  
-                  <Typography color="primary">Property Details</Typography> </Grid>
-                  
+                    <Typography color="primary">Property Details</Typography>{" "}
+                  </Grid>
+
                   <Grid item xs={12}>
-                  <FormikControl
-                    control="input"
-                    name="projectName"
-                    label="Project Name"
-                  /> </Grid>
+                    <FormikControl
+                      control="input"
+                      name="projectName"
+                      label="Project Name"
+                    />{" "}
+                  </Grid>
                   <Grid item xs={12}>
-                  <FormikControl
-                    control="input"
-                    name="address1"
-                    label="Address"
-                  /> </Grid>
-                    <Grid item xs={12} md={4}>
-                  <FormikControl control="input" name="city" label="City" /></Grid>
+                    <FormikControl
+                      control="input"
+                      name="address1"
+                      label="Address"
+                    />{" "}
+                  </Grid>
                   <Grid item xs={12} md={4}>
-                  <FormikControl
-                    control="input"
-                    name="postCode"
-                    label="Post Code"
-                  /></Grid>
+                    <FormikControl control="input" name="city" label="City" />
+                  </Grid>
                   <Grid item xs={12} md={4}>
-                  <FormikControl
-                    control="input"
-                    name="country"
-                    label="Country"
-                  /></Grid>
-                  <Grid item xs={12} >
-                  <FormikControl
-                    control="radio"
-                    name="propertyType"
-                    legend="Property Type"
-                    options={propertyTypes}
-                    row
-                  /> </Grid>
+                    <FormikControl
+                      control="input"
+                      name="postCode"
+                      label="Post Code"
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4}>
+                    <FormikControl
+                      control="input"
+                      name="country"
+                      label="Country"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <FormikControl
+                      control="radio"
+                      name="propertyType"
+                      legend="Property Type"
+                      options={propertyTypes}
+                      row
+                    />{" "}
+                  </Grid>
 
                   {/* Fin details */}
-                  <Grid item xs={12} >
-                  <Typography color="primary">Finance Details</Typography></Grid>
-                  <Grid item xs={6} >
-                  <FormikControl
-                    control="input"
-                    name="propertyValue"
-                    label="Property Value"
-                  /></Grid>
-                  <Grid item xs={6} >
-                  <FormikControl
-                    control="input"
-                    name="financeAmount"
-                    label="Finance Amount"
-                  /></Grid>
-                  <Grid item xs={12} >
-                  <FormikControl
-                    control="radio"
-                    name="financePurpose"
-                    legend="Finance Purpose"
-                    options={financePurpose}
-                    row
-                  /></Grid>
-                  <Grid item xs={12} >
-                  <FormikControl
-                    control="radio"
-                    name="productType"
-                    legend="Product Type"
-                    options={productType}
-                    row
-                  /></Grid>
-                  <Grid item xs={12} >
-                  <FormikControl
-                    control="select"
-                    name="financeLength"
-                    label="Length of Finance"
-                    options={financeLength}
-                  /></Grid>
-                    <Grid item xs={12} >
-                  <SubmitButton>Submit</SubmitButton>
+                  <Grid item xs={12}>
+                    <Typography color="primary">Finance Details</Typography>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <FormikControl
+                      control="input"
+                      name="propertyValue"
+                      label="Property Value"
+                    />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <FormikControl
+                      control="input"
+                      name="financeAmount"
+                      label="Finance Amount"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <FormikControl
+                      control="radio"
+                      name="financePurpose"
+                      legend="Finance Purpose"
+                      options={financePurpose}
+                      row
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <FormikControl
+                      control="radio"
+                      name="productType"
+                      legend="Product Type"
+                      options={productType}
+                      row
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <FormikControl
+                      control="select"
+                      name="financeLength"
+                      label="Length of Finance"
+                      options={financeLength}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <SubmitButton>Submit</SubmitButton>
                   </Grid>
                 </Grid>
               </Form>
