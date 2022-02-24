@@ -1,18 +1,24 @@
-import React from "react";
+import React from 'react';
 import {
+  
   FormControl,
   FormControlLabel,
   FormLabel,
   Radio,
-  RadioGroup,
-} from "@material-ui/core";
-import { useField, useFormikContext } from "formik";
+  RadioGroup
+} from '@material-ui/core';
+import { useField, useFormikContext } from 'formik';
 
-const RadioButton = ({ name, legend, options, ...rest }) => {
+const RadioButton = ({
+  name,
+  legend,
+  options,
+  ...rest
+}) => {
   const { setFieldValue } = useFormikContext();
   const [field, meta] = useField(name);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { value } = e.target;
     setFieldValue(name, value);
   };
@@ -20,28 +26,29 @@ const RadioButton = ({ name, legend, options, ...rest }) => {
   const configRadioButton = {
     ...field,
     ...rest,
-    onChange: handleChange,
+      onChange: handleChange
   };
 
-  const configFormControl = {};
+  const formControlConfig = {};
   if (meta && meta.touched && meta.error) {
-    configFormControl.error = true;
+    formControlConfig.error = true;
   }
 
   return (
-    <FormControl {...configFormControl}>
+    <FormControl {...formControlConfig}>
       <FormLabel component="legend">{legend}</FormLabel>
-      <RadioGroup {...configRadioButton}>
-        {options.map((option) => {
+      <RadioGroup {...configRadioButton} >
+      {options.map(option => {
           return (
-            <FormControlLabel
-              key={option.value}
-              value={option.value}
-              control={<Radio />}
-              label={option.key}
-            />
-          );
-        })}
+        <FormControlLabel 
+        key={option.value}
+            value = {option.value}
+          control={<Radio  />}
+          label={option.key}
+        />
+
+          )
+      })}
       </RadioGroup>
     </FormControl>
   );
