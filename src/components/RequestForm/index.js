@@ -49,13 +49,14 @@ export default function RequestForm() {
                     <Typography color="primary">Buyer Details</Typography>
                   </Grid>
                   <Grid item xs={12}>
-                    <Input name="regName" label="Registered Name" />
+                    <Input name="regName" label="Registered Name" required />
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <Select
                       name="companyType"
                       label="Company Type"
                       options={companyTypes}
+                      required
                     />
                   </Grid>
                   <Grid item xs={12} md={6}>
@@ -68,13 +69,13 @@ export default function RequestForm() {
                     </Typography>
                   </Grid>
                   <Grid item xs={12} md={4}>
-                    <Input name="firstName" label="First Name" />
+                    <Input name="firstName" label="First Name" required />
                   </Grid>
                   <Grid item xs={12} md={4}>
-                    <Input name="lastName" label="Last Name" />
+                    <Input name="lastName" label="Last Name" required />
                   </Grid>
                   <Grid item xs={12} md={4}>
-                    <Input name="email" label="Email" />
+                    <Input name="email" label="Email" required />
                   </Grid>
                   {/* Property Details */}
                   <Grid item xs={12}>
@@ -85,16 +86,16 @@ export default function RequestForm() {
                     <Input name="projectName" label="Project Name" />{" "}
                   </Grid>
                   <Grid item xs={12}>
-                    <Input name="address1" label="Address" />{" "}
+                    <Input name="address1" label="Address" required />{" "}
                   </Grid>
                   <Grid item xs={12} md={4}>
-                    <Input name="city" label="City" />
+                    <Input name="city" label="City" required />
                   </Grid>
                   <Grid item xs={12} md={4}>
-                    <Input name="postCode" label="Post Code" />
+                    <Input name="postCode" label="Post Code" required />
                   </Grid>
                   <Grid item xs={12} md={4}>
-                    <Input name="country" label="Country" />
+                    <Input name="country" label="Country" required />
                   </Grid>
                   <Grid item xs={12}>
                     <RadioButton
@@ -102,6 +103,7 @@ export default function RequestForm() {
                       legend="Property Type"
                       options={propertyTypes}
                       row
+                      required
                     />{" "}
                   </Grid>
 
@@ -110,10 +112,18 @@ export default function RequestForm() {
                     <Typography color="primary">Finance Details</Typography>
                   </Grid>
                   <Grid item xs={6}>
-                    <Input name="propertyValue" label="Property Value" />
+                    <Input
+                      name="propertyValue"
+                      label="Property Value"
+                      required
+                    />
                   </Grid>
                   <Grid item xs={6}>
-                    <Input name="financeAmount" label="Finance Amount" />
+                    <Input
+                      name="financeAmount"
+                      label="Finance Amount"
+                      required
+                    />
                   </Grid>
 
                   <Grid item xs={12}>
@@ -121,6 +131,7 @@ export default function RequestForm() {
                       name="financePurpose"
                       legend="Finance Purpose"
                       options={financePurpose}
+                      required
                       row
                     />
                   </Grid>
@@ -129,6 +140,7 @@ export default function RequestForm() {
                       name="productType"
                       legend="Product Type"
                       options={productType}
+                      required
                       row
                     />
                   </Grid>
@@ -138,6 +150,7 @@ export default function RequestForm() {
                       name="financeLength"
                       label="Length of Finance"
                       options={financeLength}
+                      required
                     />
                   </Grid>
                   <Grid item xs={12}>
