@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  
+  FormHelperText,
   FormControl,
   FormControlLabel,
   FormLabel,
@@ -32,6 +32,7 @@ const RadioButton = ({
   const formControlConfig = {};
   if (meta && meta.touched && meta.error) {
     formControlConfig.error = true;
+    
   }
 
   return (
@@ -50,6 +51,7 @@ const RadioButton = ({
           )
       })}
       </RadioGroup>
+      <FormHelperText>{meta.error}</FormHelperText>
     </FormControl>
   );
 };

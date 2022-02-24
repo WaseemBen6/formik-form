@@ -126,7 +126,6 @@ export default function RequestForm() {
                   </Grid>
                   <Grid item xs={12}>
                     <RadioButton
-                      control="radio"
                       name="productType"
                       legend="Product Type"
                       options={productType}
